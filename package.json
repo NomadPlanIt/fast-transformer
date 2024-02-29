@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:NomadPlanIt/fast-transformer.git"
+    "url": "git+ssh://git@github.com/NomadPlanIt/fast-transformer.git"
   },
   "author": "Chris Pomerantz",
   "dependencies": {
