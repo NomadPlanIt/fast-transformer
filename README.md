@@ -8,7 +8,7 @@ HTML templating libraries.
     npm install --save @nomad-planit/fast-transform
     
 ## Basic Usage
-The library uses a compiler to transform a template into a funtion that can be used to quickly
+The library uses a compiler to transform a template into a function that can be used to quickly
 transform a JavaScript object into another object. The template is a familiar JSON-like construct
 that respresents the destination keys and the source values. A template is compiled into a
 function that takes the source object as a parameter and will return the transformed object.
