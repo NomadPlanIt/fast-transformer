@@ -5,9 +5,31 @@ HTML templating libraries.
 
 ## Installation
 
-    npm install --save @u-dev/fast-node-transform
+    npm install --save @nomad-planit/fast-transform
     
 ## Basic Usage
+The library uses a compiler to transform a template into an object that can be used to quickly
+transform a JavaScript object into another object. The template is a familiar JSON-like construct
+that respresents the destination keys and the source values. A template is compiled into a
+function that takes the source object as a parameter and will return the transformed object.
+
+    const transformer = require('@nomadplanit/fast-transform');
+    const transform = transformer.compile({
+        id: 'userId',
+        name: 'firstName'
+    });
+    const newObject = transform({
+        userId: '1',
+        firstName: 'Jane',
+        lastName: 'Doe'
+    });
+    /*
+      newObject = {
+        id: '1',
+        name: 'Jane'
+      }
+    */
+    
 The template takes the form of shaping your resulting data structure by creating a JavaScript
 object that contains the destination fields in the left hand side and the source fields on the
 right hand side. A simple template would look something like this:
